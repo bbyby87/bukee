@@ -787,8 +787,8 @@ body {
 }
 
 .page-btn-main {
-  background: -webkit-gradient(linear, right bottom, left top, from(#65e49c), to(#65e4af));
   background: -o-linear-gradient(bottom right, #65e49c, #65e4af);
+  background: -webkit-gradient(linear, right bottom, left top, from(#65e49c), to(#65e4af));
   background: linear-gradient(to top left, #65e49c, #65e4af);
   padding: 12px 0px 14px;
   -webkit-box-shadow: 0 -2px #59ba88 inset;
@@ -796,8 +796,8 @@ body {
 }
 
 .page-btn {
-  background: -webkit-gradient(linear, right bottom, left top, from(#65e49c), to(#65e4af));
   background: -o-linear-gradient(bottom right, #65e49c, #65e4af);
+  background: -webkit-gradient(linear, right bottom, left top, from(#65e49c), to(#65e4af));
   background: linear-gradient(to top left, #65e49c, #65e4af);
   padding: 12px 0 14px;
   -webkit-box-shadow: 0 -2px #adedbb inset;
@@ -1287,7 +1287,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     max-width: 600px;
-    margin: 85px auto 0;
+    margin: 0 auto;
   }
 
   .block-blog-item {
@@ -1319,12 +1319,6 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .block-ava {
-    display: none;
-  }
-}
-
 @media (max-width: 750px) {
   .block-counter p {
     margin-bottom: 80px;
@@ -1353,10 +1347,14 @@ body {
   .block-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     text-align: center;
   }
+
+  .block-footer__links, .block-footer__icons {
+      margin-bottom: 40px;
+  }    
 
   .block-footer__logo {
     margin: 0 auto 30px;
@@ -1378,6 +1376,13 @@ body {
 }
 
 @media (max-width: 600px) {
+  .header-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .page-main {
     padding-bottom: 50px;
   }
@@ -1387,11 +1392,8 @@ body {
     padding-bottom: 50px;
   }
 
-  .header-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .block-blog-img {
+    margin-top: 40px;
   }
 }
 
@@ -1426,6 +1428,10 @@ body {
     display: none;
   }
 
+  .block-ava {
+    display: none;
+  }
+
   .block-counter p {
     margin-bottom: 45px;
   }
@@ -1438,4 +1444,7 @@ body {
   .block-letter__title {
     font-size: 30px;
   }
+  .block-blog + .page-btn {
+    margin-top: 40px;
+  }  
 }
